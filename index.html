@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>LoveGoBuy spreadsheet | Guia de links, medidas e QC</title>
+  <meta name="description" content="Use a LoveGoBuy spreadsheet para explorar 10 categorias, conferir links e medidas, ler fotos de QC e estimar o custo do envio internacional.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LoveGoBuy spreadsheet | Guia de links, medidas e QC">
+  <meta property="og:description" content="Explore 10 categorias e saiba o que conferir no anúncio, nas fotos de QC e na cotação do frete antes de comprar.">
+  <meta name="theme-color" content="#f5f2ec">
+  <style>
+    :root{color-scheme:light;--bg:#f5f2ec;--ink:#171831;--soft:#4c4e67;--blue:#29278a;--line:#d6d4df;--paper:#fffdf9;--lime:#e2f28b}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.65 system-ui,sans-serif}
+    a{color:var(--blue);text-underline-offset:.2em}
+    a:focus-visible,summary:focus-visible{outline:3px solid #4744ae;outline-offset:4px}
+    img{display:block;width:100%;height:auto}
+    figure,p{margin:0}
+    p+p{margin-top:.8rem}
+    h1,h2,h3{margin:0 0 .65rem;line-height:1.12;letter-spacing:-.035em}
+    h2{font-size:clamp(1.75rem,4vw,2.85rem)}
+    h3{font-size:1.35rem}
+    .wrap{width:min(72rem,calc(100% - 2rem));margin-inline:auto}
+    .bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap;padding:.8rem 0;border-bottom:1px solid var(--line)}
+    .brand{color:var(--ink);font-weight:850;text-decoration:none}
+    .eyebrow{font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.13em;color:var(--blue)}
+    .hero{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(1rem,4vw,3.25rem);align-items:center;padding-block:clamp(1.5rem,4.8vw,3.5rem)}
+    h1{font-size:clamp(2.35rem,6.1vw,5.1rem);letter-spacing:-.072em;margin:.5rem 0 .85rem;overflow-wrap:anywhere}
+    .intro{max-width:42rem;color:var(--soft)}
+    .button{display:inline-block;margin-top:1rem;padding:.55rem .9rem;background:var(--lime);color:var(--ink);font-weight:800;border:1px solid var(--ink);border-radius:.35rem;text-decoration:none}
+    .button:hover{background:#edf7bb}
+    .cover{padding:.55rem;border:1px solid var(--line);border-radius:.7rem;background:var(--paper)}
+    .cover img{height:clamp(10rem,25vw,17rem);object-fit:contain;background:#fff}
+    figcaption{padding:.45rem .35rem .15rem;color:var(--soft);font-size:.82rem}
+    section{margin-bottom:clamp(2rem,5vw,3.75rem)}
+    .index{padding:clamp(.9rem,3vw,1.55rem);background:var(--blue);color:white;border-radius:.75rem}
+    .index h2{font-size:clamp(1.45rem,3vw,2.1rem)}
+    .categories{list-style:none;margin:.85rem 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.45rem}
+    .categories a{height:100%;min-height:2.9rem;display:flex;align-items:center;gap:.45rem;padding:.45rem .6rem;background:#fff;color:var(--ink);border-radius:.3rem;text-decoration:none;font-weight:720;line-height:1.25}
+    .categories a:hover{background:var(--lime)}
+    .categories a:focus-visible{outline-color:var(--lime)}
+    .number{font-size:.7rem;font-variant-numeric:tabular-nums;color:var(--blue)}
+    .section-head{margin-bottom:1rem}
+    .section-head p{max-width:66ch;color:var(--soft)}
+    .checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
+    article{padding:clamp(.95rem,3vw,1.45rem);border:1px solid var(--line);border-radius:.55rem;background:var(--paper)}
+    article .eyebrow{display:block;margin-bottom:.5rem}
+    .gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
+    .gallery figure{padding:.5rem;background:var(--paper);border:1px solid var(--line);border-radius:.55rem}
+    .gallery img{aspect-ratio:1;object-fit:contain;background:#fff}
+    .faq{max-width:53rem}
+    details{border-top:1px solid var(--line);padding:.72rem .25rem}
+    details:last-child{border-bottom:1px solid var(--line)}
+    summary{font-weight:800;cursor:pointer}
+    details p{padding:.4rem 0 .15rem 1.1rem}
+    footer{padding:1.15rem 0 1.8rem;border-top:1px solid var(--line);color:var(--soft)}
+    @media(max-width:54rem){.categories{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:37rem){.hero,.checklist{grid-template-columns:1fr}.cover img{height:9rem}.categories,.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "LoveGoBuy spreadsheet | Guia de links, medidas e QC",
+        "description": "Use a LoveGoBuy spreadsheet para explorar 10 categorias, conferir links e medidas, ler fotos de QC e estimar o custo do envio internacional.",
+        "inLanguage": "pt",
+        "about": {"@type": "Thing", "name": "LoveGoBuy spreadsheet"}
+      },
+      {
+        "@type": "FAQPage",
+        "name": "Perguntas frequentes sobre a LoveGoBuy spreadsheet",
+        "inLanguage": "pt",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O que é uma LoveGoBuy spreadsheet?",
+            "acceptedAnswer": {"@type": "Answer", "text": "É uma lista de referência para organizar links de produtos, comparar variantes e guardar observações sobre medidas, fotos e envio."}
+          },
+          {
+            "@type": "Question",
+            "name": "O que fazer se um link do Weidian deixar de abrir?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Procure pelo nome do modelo ou pelo código do produto. Ao encontrar outro anúncio, confira se o vendedor, a cor e a variante correspondem ao que você anotou."}
+          },
+          {
+            "@type": "Question",
+            "name": "As fotos de QC comprovam a autenticidade?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Fotos de QC ajudam a conferir características visíveis, como cor, costuras e etiquetas. Para confirmar a autenticidade, procure documentação de procedência e avaliação especializada quando necessário."}
+          },
+          {
+            "@type": "Question",
+            "name": "Como comparar estimativas de envio para Portugal e Brasil?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Faça uma cotação separada para cada destino com o código postal e as mesmas medidas da caixa. Registre a moeda, os serviços incluídos e os encargos de importação aplicáveis antes de comparar os totais."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Pesquisa editorial sobre dez domínios encontrados para a consulta. A ordem da primeira página do Google ficou por confirmar. -->
+<link rel="canonical" href="https://kakobuyfinds.github.io/smnaq/">
+</head>
+<body>
+  <header class="wrap bar">
+    <a class="brand" href="https://www.hipobuyfind.com">www.hipobuyfind.com</a>
+    <span class="eyebrow">Caderno de compra</span>
+  </header>
+  <main class="wrap">
+    <div class="hero">
+      <div>
+        <p class="eyebrow">Links, medidas e envio</p>
+        <h1>LoveGoBuy spreadsheet</h1>
+        <p class="intro">Uma LoveGoBuy spreadsheet organiza links e observações para comparar produtos antes de comprar. Explore as categorias e descubra como confirmar o anúncio, escolher o tamanho, ler as fotos de controle de qualidade (QC) e estimar o envio.</p>
+        <a class="button" href="https://www.hipobuyfind.com">Abrir HipobuyFind</a>
+      </div>
+      <figure class="cover">
+        <img src="https://alssports.vteximg.com.br/arquivos/ids/3879892-640-640/10613661x1238466.jpg?v=639047797771100000" width="640" height="640" alt="Nike Air Force 1 branco visto de lado, com biqueira perfurada e sola branca" fetchpriority="high" loading="eager">
+        <figcaption>Nike Air Force 1 · Referência visual de calçado</figcaption>
+      </figure>
+    </div>
+
+    <section class="index" aria-labelledby="categorias">
+      <h2 id="categorias">Explore 10 categorias</h2>
+      <nav aria-label="Categorias no HipobuyFind">
+        <ul class="categories">
+          <li><a href="https://hipobuyfind.com/category-911-Shoes.html"><span class="number" aria-hidden="true">01</span> Calçado</a></li>
+          <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html"><span class="number" aria-hidden="true">02</span> Moletons e suéteres</a></li>
+          <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html"><span class="number" aria-hidden="true">03</span> Camisetas</a></li>
+          <li><a href="https://hipobuyfind.com/category-914-Jackets.html"><span class="number" aria-hidden="true">04</span> Jaquetas</a></li>
+          <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html"><span class="number" aria-hidden="true">05</span> Calças e shorts</a></li>
+          <li><a href="https://hipobuyfind.com/category-916-Headwear.html"><span class="number" aria-hidden="true">06</span> Bonés e chapéus</a></li>
+          <li><a href="https://hipobuyfind.com/category-917-Sets.html"><span class="number" aria-hidden="true">07</span> Conjuntos</a></li>
+          <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html"><span class="number" aria-hidden="true">08</span> Roupa íntima</a></li>
+          <li><a href="https://hipobuyfind.com/category-919-Jersey.html"><span class="number" aria-hidden="true">09</span> Camisas esportivas</a></li>
+          <li><a href="https://hipobuyfind.com/category-920-Accessories.html"><span class="number" aria-hidden="true">10</span> Acessórios</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section aria-labelledby="guias">
+      <div class="section-head">
+        <p class="eyebrow">Quatro decisões antes de comprar</p>
+        <h2 id="guias">Do anúncio ao pedido</h2>
+        <p>Use uma linha por variante na sua lista de comparação. Quando faltar uma medida ou uma foto, anote exatamente o que precisa de confirmar.</p>
+      </div>
+      <div class="checklist">
+        <article>
+          <span class="eyebrow">01 · Origem</span>
+          <h3>Links de produtos LoveGoBuy</h3>
+          <p>Ao guardar links do Weidian, Taobao ou 1688, registre o nome do vendedor, o código do produto e a data da consulta. Na página de destino, confira a variante de cor, o tamanho selecionado, a quantidade mínima e o preço da opção escolhida.</p>
+          <p>Se o anúncio mudar, compare a referência e as fotos com as suas notas antes de atualizar o link original do vendedor.</p>
+        </article>
+        <article>
+          <span class="eyebrow">02 · Ajuste</span>
+          <h3>Guia de tamanhos para compras com LoveGoBuy</h3>
+          <p>Para comparar a tabela de tamanhos do vendedor, meça uma peça que já tenha um bom caimento. Em uma jaqueta, anote a largura do peito com a peça estendida, o comprimento da manga e o comprimento das costas. Nas calças, confira a cintura e o comprimento da entreperna.</p>
+          <p>No calçado, confirme se a medida em centímetros descreve o comprimento do pé ou o da palmilha. Use a conversão entre tamanhos EU e BR indicada para o modelo.</p>
+        </article>
+        <article>
+          <span class="eyebrow">03 · Inspeção</span>
+          <h3>Fotos de QC no LoveGoBuy</h3>
+          <p>Quando houver fotos do depósito, compare a etiqueta de tamanho, o alinhamento das costuras e a cor com a variante pedida. Para um par de tênis, procure imagens de ambos os pés e um detalhe da sola. Em uma peça estampada, peça uma imagem de frente se a estampa estiver cortada no enquadramento.</p>
+          <p>Se identificar uma divergência, guarde a foto e consulte o prazo e as condições de devolução antes de autorizar o envio.</p>
+        </article>
+        <article>
+          <span class="eyebrow">04 · Destino</span>
+          <h3>Envio internacional com LoveGoBuy</h3>
+          <p>Separe o valor do produto, o frete interno na China, as taxas do agente e o frete internacional. Para comparar cotações de envio, confirme o peso real, o peso volumétrico e as dimensões da embalagem.</p>
+          <p>Use o CEP ou código postal de destino e confira os possíveis encargos aduaneiros. Para Portugal, compare os totais em euros. Para o Brasil, converta os valores para reais pela mesma taxa de câmbio.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="referencias">
+      <div class="section-head">
+        <h2 id="referencias">Detalhes a observar nas fotos</h2>
+        <p>As imagens são referências de design para ajudar a identificar o que observar em roupas, bonés e acessórios.</p>
+      </div>
+      <div class="gallery">
+        <figure>
+          <img src="https://www.crepslocker.com/cdn/shop/products/dior-oblique-towelling-terry-navy-hoodie-113j631a0684_c540-crepslocker-front.jpg?v=1678892019&amp;width=480" width="480" height="480" alt="Moletom Dior Oblique azul-marinho com capuz, visto de frente" loading="lazy" decoding="async">
+          <figcaption>Dior · Observe o padrão e os punhos.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-only-lv-cap--M5243M_PM2_Front%20view.jpg?wid=480" width="490" height="490" alt="Boné marrom Louis Vuitton com iniciais LV douradas à frente" loading="lazy" decoding="async">
+          <figcaption>Louis Vuitton · Confira a aba e o bordado frontal.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://cdn.clothbase.com/uploads/a99e42e1-f5b6-4dde-aa37-5fdd343bb5b0/P00992209_d4.jpg" width="1200" height="1356" alt="Anel Gucci prateado com motivo de dois G entrelaçados" loading="lazy" decoding="async">
+          <figcaption>Gucci · Peça uma foto da gravação interior.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://globazone-item-images.elady.com/mall/1013970/GZrg1h/1/500" width="500" height="500" alt="Lenço quadrado Hermès escuro com motivos equestres dourados" loading="lazy" decoding="async">
+          <figcaption>Hermès · Confira a bainha e a continuidade do padrão.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="perguntas">
+      <h2 id="perguntas">Perguntas frequentes sobre a LoveGoBuy spreadsheet</h2>
+      <details open>
+        <summary>O que é uma LoveGoBuy spreadsheet?</summary>
+        <p>É uma lista de referência para organizar links de produtos, comparar variantes e guardar observações sobre medidas, fotos e envio.</p>
+      </details>
+      <details>
+        <summary>O que fazer se um link do Weidian deixar de abrir?</summary>
+        <p>Procure pelo nome do modelo ou pelo código do produto. Ao encontrar outro anúncio, confira se o vendedor, a cor e a variante correspondem ao que você anotou.</p>
+      </details>
+      <details>
+        <summary>As fotos de QC comprovam a autenticidade?</summary>
+        <p>Fotos de QC ajudam a conferir características visíveis, como cor, costuras e etiquetas. Para confirmar a autenticidade, procure documentação de procedência e avaliação especializada quando necessário.</p>
+      </details>
+      <details>
+        <summary>Como comparar estimativas de envio para Portugal e Brasil?</summary>
+        <p>Faça uma cotação separada para cada destino com o código postal e as mesmas medidas da caixa. Registre a moeda, os serviços incluídos e os encargos de importação aplicáveis antes de comparar os totais.</p>
+      </details>
+    </section>
+  </main>
+  <footer class="wrap">
+    <p>Guia editorial independente. As imagens ilustram características de design.</p>
+    <p><a href="https://www.hipobuyfind.com">Explorar mais no HipobuyFind</a></p>
+  </footer>
+</body>
+</html>
